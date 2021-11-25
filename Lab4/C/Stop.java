@@ -14,7 +14,7 @@ public class Stop {
 
     public void connect(Stop node, int price) {
         if (this == node) {
-            throw new IllegalArgumentException("Can't ride in within one city");
+            throw new IllegalArgumentException("Enter different city");
         }
         this.neighbors.put(node, price);
         node.neighbors.put(this, price);
