@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<map>
+	<line id="4" color="violet">
+		<station id="41" name="Troeshyna" is_end="1"/>
+	</line>
+	<line id="3" color="red">
+		<station id="31" name="Vokzalna" is_end="0"/>
+		<station id="32" name="Khreshatyk" is_end="0"/>
+        <station id="33" name="Lisova" is_end="0"/>
+	</line>
+</map>

@@ -1,7 +1,6 @@
 package C;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-import static java.lang.System.*;
 
 public class C {
     private static final String KYIV = "Kyiv";
@@ -21,7 +20,7 @@ public class C {
         threadCreator.addFlight(CHERKASY, KHARKIV, 120);
         threadCreator.addFlight(KYIV, CHERKASY, 50);
         threadCreator.changeFlightPrice(KYIV, CHERKASY, 80);
-        out.println("Price for flight " + CHERKASY + " - " + KHARKIV + " = " +
+        System.out.println("Price for flight " + CHERKASY + " - " + KHARKIV + " = " +
                 threadCreator.getFlightPrice(CHERKASY, KHARKIV));
         threadCreator.deleteFlight(CHERKASY, KYIV);
         threadCreator.deleteBusStop(LVIV);
