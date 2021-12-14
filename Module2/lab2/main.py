@@ -59,7 +59,7 @@ def delete_line(id):
         return True
     except Exception as e:
         print(e)
-        print(f"Error when deleting country with id {id}")
+        print(f"Error when deleting line with id {id}")
         db.rollback()
         return False
 
@@ -78,9 +78,24 @@ def add_station(name, line_id, is_end):
         return False
 
 
+
+def delete_station(id):
+    sql = f"DELETE FROM station WHERE id = {id}"
+    try:
+        cursor.execute(sql)
+        db.commit()
+        print(f"Station with id {id} successfully deleted")
+        return True
+    except Exception as e:
+        print(e)
+        print(f"Error when deleting station with id {id}")
+        db.rollback()
+        return False
+
+
 def main():
-    # get_lines()
     # add_station('Maidan Nezaljnosti', 1, 0)
+    # delete_station(3)
     get_lines()
 
 
