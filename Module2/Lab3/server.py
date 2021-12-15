@@ -1,7 +1,7 @@
 import socket
 import sys 
 sys.path.append('../')
-import controller
+from controller import Controller
 
 oper_to_args_num = {
     'add_line': 1,
@@ -25,7 +25,7 @@ def start():
         for arg in range(n_args):
             c.recv(1024)
             args.append(arg)
-        result = getattr(controller, oper)(*args)
+        result = getattr(Controller, oper)(*args)
         c.send(bytes(str(result), 'utf-8'))
 
 with socket.socket() as s:
