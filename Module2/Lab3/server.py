@@ -1,4 +1,6 @@
 import socket
+import sys 
+sys.path.append('../')
 import controller
 
 oper_to_args_num = {
